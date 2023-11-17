@@ -1,0 +1,7 @@
+{
+	"Products" : [
+		{ "Name" : "Water Bottle" },
+		{ "Name" : "Mouse" },
+		{ "Name" : "Watch", "ImageSrc" : "/ProductImages/AWatch.PNG" }
+	]
+}
