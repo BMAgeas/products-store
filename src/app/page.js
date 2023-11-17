@@ -1,6 +1,8 @@
+import globalStyleVariables from "./variables.module.scss";
+
 export default function Home() {
 	return (
-		<main className="">
+		<main style={{ backgroundColor : globalStyleVariables.subtleGrey }}>
 			Content here...
 		</main>
 	);
