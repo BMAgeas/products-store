@@ -1,5 +1,26 @@
+.searchTextbox {
+	padding:		6px;
+	margin-top:		8px;
+	font-size:		17px;
+	border:			none;
+}
+
+.searchButton {
+	float:			right;
+	padding:		6px 10px;
+	margin-top:		8px;
+	margin-right:	16px;
+	background:		#D0D0D0;
+	font-size:		17px;
+	border:			none;
+	cursor:			pointer;
+}
+
+.searchButton:hover {
+	background:		#C0C0C0;
+}
+
 @media screen and (max-width: 600px) {
-	.searchContainer { float: none; }
 	.searchTextbox, .searchButton {
 		float:		none;
 		display:	block;

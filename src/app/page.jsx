@@ -9,7 +9,7 @@ export default async function Home() {
 	return (
 		<>
 			<PSHeader/>
-			<main style={{ backgroundColor : globalStyleVariables.subtleGrey }}>
+			<main>
 				
 				<b>Products:</b>
 

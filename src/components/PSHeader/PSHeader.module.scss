@@ -1,3 +1,27 @@
 @import "./../../app/variables.module.scss";
 
-.HeaderBox { overflow: hidden; background-color: $subtle-grey; }
+.headerBox {
+	overflow:			hidden;
+	background-color:	$subtle-grey;
+}
+
+.headerBox a, .headerLogoImage {
+	float:				left;
+	display:			block;
+	color:				black;
+	text-align:			center;
+	padding:			14px 16px;
+	text-decoration:	none;
+	font-size:			17px;
+}
+
+.headerBox a:hover {
+	background-color:	#D0D0D0;
+	color:				black;
+}
+
+.searchContainer { float: right; }
+
+@media screen and (max-width: 600px) {
+	.searchContainer { float: none; }
+}
