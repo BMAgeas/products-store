@@ -2,7 +2,7 @@ import PSHeader				from "@/components/PSHeader/PSHeader";
 import {promises as fs}		from "fs";
 
 export const metadata = {
-	title		: "Products' Store",
+	title		: "PAGE: Products' Store",
 	description	: "Main ProductBoxes page"
 };
 
