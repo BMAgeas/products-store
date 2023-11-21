@@ -1,3 +1,4 @@
+import PSHeader				from "@/components/PSHeader/PSHeader";
 import globalStyleVariables	from "./variables.module.scss";
 import {promises as fs}		from "fs";
 
@@ -7,7 +8,7 @@ export default async function Home() {
 	
 	return (
 		<>
-			<header>Search...</header>
+			<PSHeader/>
 			<main style={{ backgroundColor : globalStyleVariables.subtleGrey }}>
 				
 				<b>Products:</b>
@@ -15,7 +16,7 @@ export default async function Home() {
 				{
 					productsJson.Products.map(
 						(Product, index, array) =>
-							<p>{Product.Name}</p>
+							<p key={index}>{Product.Name}</p>
 					)
 				}
 
