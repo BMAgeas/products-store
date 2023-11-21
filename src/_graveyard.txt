@@ -1,0 +1,5 @@
+11:58 21/11/2023
+	import {FcSearch} from "react-icons/fc";
+	<FcSearch/>
+
+	<main style={{ backgroundColor : globalStyleVariables.subtleGrey }}>
