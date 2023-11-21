@@ -1,6 +1,10 @@
 import PSHeader				from "@/components/PSHeader/PSHeader";
-import globalStyleVariables	from "./variables.module.scss";
 import {promises as fs}		from "fs";
+
+export const metadata = {
+	title		: "Products' Store",
+	description	: "Main ProductBoxes page"
+};
 
 export default async function Home() {
 	

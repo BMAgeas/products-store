@@ -1,4 +1,7 @@
-.bodyTag {
+@use "sass:map";
+@import "src/app/variables.module.scss";
+
+body {
 	margin:			0;
-	font-family:	Arial, Helvetica, sans-serif;
+	font-family:	map.get($globalFonts, "mainFont"), sans-serif;
 }

@@ -1,8 +1,9 @@
-@import "./../../app/variables.module.scss";
+@use "sass:map";
+@import "src/app/variables.module.scss";
 
 .headerBox {
 	overflow:			hidden;
-	background-color:	$subtle-grey;
+	background-color:	map.get($globalColours, "subtleGrey");
 }
 
 .headerBox a, .headerLogoImage {

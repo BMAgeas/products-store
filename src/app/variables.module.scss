@@ -1,6 +1,13 @@
-/* Globals */
-$subtle-grey:	#F8F8F8FF;
+$globalColours: (
+	"subtleGrey"	: rgb(231, 231, 231)
+);
 
+$globalFonts: (
+	"mainFont"		: "Raleway"
+);
+
+/* Make SCSS variables accessible as JavaScript Variables */
 :export {
-	subtleGrey:	$subtle-grey;
+	@each $key, $value in $globalColours	{ #{unquote($key)}: $value; }
+	@each $key, $value in $globalFonts		{ #{unquote($key)}: $value; }
 }
