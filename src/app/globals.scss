@@ -1,6 +1,15 @@
-@import "src/app/variables.scss";
-@import "src/app/mixins.scss";
+/*
+	Import Structure:
+		mixins.scss		→ globals.scss
+		variables.scss	→ globals.scss
+		globals.scss	→ (Project files...)
+*/
 
+@use "sass:map";
+@import "src/app/_variables.scss";
+@import "src/app/_mixins.scss";
+
+/* Globally-useful Classes */
 .sectionHeading {
-	color:		rgb(54, 54, 54);
+	color:	map.get($globalColours, "nearlyBlack");
 }
