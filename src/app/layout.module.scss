@@ -1,0 +1,7 @@
+@use "sass:map";
+@import "src/app/variables.scss";
+
+.bodyTag {
+	margin:			0;
+	font-family:	"#{map.get($globalFonts, "mainFont")}", sans-serif;
+}

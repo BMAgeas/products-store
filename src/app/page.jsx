@@ -1,3 +1,5 @@
+import DebugStyles from "src/app/FileA.scss";
+
 import styles				from "./page.module.scss";
 import {promises as fs}		from "fs";
 import PSHeader				from "@/components/PSHeader/PSHeader";
@@ -12,7 +14,7 @@ export default async function Home() {
 			<PSHeader/>
 			<main className={styles.mainTag}>
 				
-				<h1 style={{ textAlign : "center" }}>Products:</h1>
+				<h1 className={styles.sectionHeading}>Products:</h1>
 				
 				<ul className={styles.ProductBoxesContainer}>
 					{
@@ -23,7 +25,7 @@ export default async function Home() {
 				</ul>
 
 			</main>
-			<footer>Products Store (c) 2023</footer>
+			<footer className={DebugStyles.DebugMe}>Products Store (c) 2023</footer>
 		</>
 	);
 

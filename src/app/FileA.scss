@@ -1,0 +1,6 @@
+@import "FileB.scss";
+
+.DebugMe {
+	@debug "In FileA: #{$FromC}";
+	color: red;
+}

@@ -1,0 +1,12 @@
+Centralise all colours in variables.module.scss
+
+fetch(
+	"https://famous-quotes4.p.rapidapi.com/random?category=all&count=1",
+	{
+		method	: "GET",
+		headers	: {
+			"X-RapidAPI-Key"	: "d40425d36dmshedd78b65be248d1p10d703jsn0afce6dda076",
+			"X-RapidAPI-Host"	: "famous-quotes4.p.rapidapi.com"
+		}
+	}
+).then(response => console.log(response)).catch(err => console.error(err));
