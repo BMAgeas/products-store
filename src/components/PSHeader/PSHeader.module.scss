@@ -6,6 +6,11 @@
 	background-color:	map.get($globalColours, "subtleGrey");
 }
 
+.headerLogoImage {
+	width:				1.8%;
+	height:				auto;
+}
+
 .headerBox a, .headerLogoImage {
 	float:				left;
 	display:			block;

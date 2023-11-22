@@ -15,7 +15,7 @@ export default async function Home() {
 			<PSHeader/>
 			<main>
 				
-				<b>Products:</b>
+				<h1>Products:</h1>
 
 				{
 					productsJson.Products.map(
