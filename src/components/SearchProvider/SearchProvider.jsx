@@ -1,3 +1,4 @@
+"use client";
 import styles from "./SearchProvider.module.scss";
 
 export default function SearchProvider() {

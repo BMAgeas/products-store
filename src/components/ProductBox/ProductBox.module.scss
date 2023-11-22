@@ -1,0 +1,57 @@
+@import "src/app/mixins.scss";
+
+.productBoxOuter {
+
+	/* ↓ Alignment ↓ */
+	width:				20%;
+	box-sizing:			border-box;
+	text-align:			center;
+	display:			block;
+
+	/* ↓ Border ↓ */
+	border-style:		solid;
+	border-color:		rgb(224, 224, 224);
+	border-width:		2px;
+	border-radius:		5px;
+	@include			miBoxShadow;
+
+	/* ↓ Spacing ↓ */
+	padding-top:		1em;
+	padding-left:		1em;
+	padding-right:		1em;
+	padding-bottom:		1em;
+	margin-left:		1.5em;
+	margin-right:		1.5em;
+	margin-top:			0.5em;
+	margin-bottom:		0.5em;
+
+	/* ↓ Content ↓ */
+	background-color:	rgb(245, 243, 243);
+	font-size:			0.8rem;
+
+}
+
+.productThumbnail {
+	border-radius:		4px;
+	@include			miBoxShadow;
+	margin-bottom:		0.6em;
+}
+
+/* ↓ Vertical (Mobile) ↓ */
+@media only screen and (max-width: 600px) {
+
+	.productBoxOuter {
+
+		/* ↓ Alignment ↓ */
+		width:				45%;
+		padding:			0.5em;
+		margin:				0.5em;
+
+		/* ↓ Content ↓ */
+		font-size:			0.7rem;
+
+	}
+
+	.productHeading { font-size: 0.8rem; margin-bottom: 0.2em; }
+
+}

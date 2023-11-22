@@ -1,5 +1,5 @@
 import globalStyleVars	from "src/app/variables.module.scss";
-import "src/app/global.scss";
+import styles			from "./layout.module.scss";
 
 export default function RootLayout({ children }) {
 	return (
@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="stylesheet" href={`https://fonts.googleapis.com/css2?family=${globalStyleVars.mainFont}`} precedence="default" />
 			</head>
-			<body>{children}</body>
+			<body className={styles.bodyTag}>{children}</body>
 		</html>
 	);
 };

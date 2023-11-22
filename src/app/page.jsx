@@ -1,10 +1,7 @@
-import PSHeader				from "@/components/PSHeader/PSHeader";
+import styles				from "./page.module.scss";
 import {promises as fs}		from "fs";
-
-export const metadata = {
-	title		: "PAGE: Products' Store",
-	description	: "Main ProductBoxes page"
-};
+import PSHeader				from "@/components/PSHeader/PSHeader";
+import ProductBox			from "@/components/ProductBox/ProductBox";
 
 export default async function Home() {
 	
@@ -13,16 +10,17 @@ export default async function Home() {
 	return (
 		<>
 			<PSHeader/>
-			<main>
+			<main className={styles.mainTag}>
 				
-				<h1>Products:</h1>
-
-				{
-					productsJson.Products.map(
-						(Product, index, array) =>
-							<p key={index}>{Product.Name}</p>
-					)
-				}
+				<h1 style={{ textAlign : "center" }}>Products:</h1>
+				
+				<ul className={styles.ProductBoxesContainer}>
+					{
+						productsJson.Products.map(
+							(Product, index, array) => <ProductBox key={index} ProductName={Product.Name} />
+						)
+					}
+				</ul>
 
 			</main>
 			<footer>Products Store (c) 2023</footer>
