@@ -1,7 +1,8 @@
-import globalStyles		from "src/app/globals.scss";
 import styles			from "./layout.module.scss";
+import globalStyles		from "src/app/globals.scss";
 
 export default function RootLayout({ children }) {
+	console.log("________________________________mainFont=" + globalStyles.mainFont);
 	return (
 		<html lang="en">
 			<head>
@@ -15,5 +16,3 @@ export default function RootLayout({ children }) {
 		</html>
 	);
 };
-
-console.info("________________________________mainFont=" + globalStyles.mainFont);

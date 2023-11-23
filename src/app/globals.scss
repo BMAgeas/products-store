@@ -1,15 +1,51 @@
 /*
-	Import Structure:
-		mixins.scss		→ globals.scss
-		variables.scss	→ globals.scss
-		globals.scss	→ (Project files...)
+	Contains Mixins (mi*), global classes (.*) and global SASS variables ($global*).
+	All put into one file, because I spent hours trying to get them to import together in a chain from different files, with no luck.
 */
 
 @use "sass:map";
-@import "src/app/_variables.scss";
-@import "src/app/_mixins.scss";
 
-/* Globally-useful Classes */
+/* <Variables> */
+
+$globalColours: (
+	"subtleGrey"	: rgb(241, 241, 241),
+	"nearlyBlack"	: rgb(054, 054, 054),
+	"lurid"			: rgb(255, 000, 000)
+);
+
+$globalFonts: (
+	"mainFont"		: Cabin
+);
+
+/* Make SCSS variables accessible as JavaScript Variables (only via importing this file) */
+:export {
+	@each $key, $value in $globalColours	{ #{unquote($key)}: $value; }
+	@each $key, $value in $globalFonts		{ #{unquote($key)}: $value; }
+}
+
+/* </Variables> */
+
+/* <Classes> */
+
 .sectionHeading {
 	color:	map.get($globalColours, "nearlyBlack");
 }
+
+/* </Classes> */
+
+/* <Mixins> */
+
+@mixin miBoxShadow {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+@mixin miGridContentFlexbox {
+	display:			flex;
+	flex-direction:		column;
+	flex-wrap:			nowrap;
+	justify-content:	flex-start;	/* ↑↓ */
+	align-items:		center;		/* ←→ */
+	align-content:		stretch;	/* ?? */
+}
+
+/* </Mixins> */
