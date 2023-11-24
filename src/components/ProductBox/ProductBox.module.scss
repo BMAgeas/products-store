@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "src/app/styles/globals.scss";
 
 .productBoxOuter {
@@ -10,7 +11,7 @@
 
 	/* ↓ Border ↓ */
 	border-style:		solid;
-	border-color:		rgb(224, 224, 224);
+	border-color:		map.get($globalColours, "midGrey");
 	border-width:		2px;
 	border-radius:		5px;
 	@include			miBoxShadow;
@@ -26,15 +27,24 @@
 	margin-bottom:		0.5em;
 
 	/* ↓ Content ↓ */
-	background-color:	rgb(245, 243, 243);
+	background-color:	map.get($globalColours, "subtleGrey");
 	font-size:			0.8rem;
 
 }
 
 .productThumbnail {
-	border-radius:		4px;
-	@include			miBoxShadow;
-	margin-bottom:		0.6em;
+
+	box-sizing:					border-box;
+	display:					block;
+	vertical-align:				middle;
+
+	object-fit:					cover;
+	border-top-left-radius:		map.get($globalSizes, "midBorderRadius");
+    border-top-right-radius:	map.get($globalSizes, "midBorderRadius");
+}
+
+.productDescription {
+	font-size:			1em;
 }
 
 /* ↓ Vertical (Mobile) ↓ */

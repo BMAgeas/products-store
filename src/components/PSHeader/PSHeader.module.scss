@@ -14,7 +14,7 @@
 .headerBox a, .headerLogoImage {
 	float:				left;
 	display:			block;
-	color:				black;
+	color:				map.get($globalColours, "deadBlack");
 	text-align:			center;
 	padding:			14px 16px;
 	text-decoration:	none;
@@ -22,8 +22,8 @@
 }
 
 .headerBox a:hover {
-	background-color:	#D0D0D0;
-	color:				black;
+	background-color:	map.get($globalColours, "midGrey");
+	color:				map.get($globalColours, "deadBlack");
 }
 
 .searchContainer { float: right; }
