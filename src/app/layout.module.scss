@@ -1,7 +1,17 @@
+/*
+	The font isn't applied to the <body> by a `body { ... }` class in globals.scss, because:
+		- Any *.module.scss file that then imported globals.scss would contain global.scss's contents
+		- This would include the `body { ... }` class, which uses an impure selector
+		- And *.module.scss files are NOT ALLOWED to contain impure (non-locally-scoped) selectors
+	
+	Therefore, this *.module.scss file imports globals (which dosen't contain a `body { ... }` class),
+	and uses the $globalFonts map variable, to set the font-family via a pure selector (.bodyTag).
+*/
+
 @use "sass:map";
-@import "src/app/globals.scss";
+@import "src/app/styles/globals.scss";
 
 .bodyTag {
 	margin:			0;
-	font-family:	"#{map.get($globalFonts, "mainFont")}", sans-serif;
+	font-family:	"#{map.get($globalFonts, "siteFont")}", sans-serif;
 }

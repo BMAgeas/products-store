@@ -1,11 +1,16 @@
-import styles				from "./page.module.scss";
-import {promises as fs}		from "fs";
-import PSHeader				from "@/components/PSHeader/PSHeader";
-import ProductBox			from "@/components/ProductBox/ProductBox";
+import {promises as fileSys}	from "fs";
+import styles					from "./page.module.scss";
+import PSHeader					from "@/components/PSHeader/PSHeader";
+import ProductBox				from "@/components/ProductBox/ProductBox";
+
+export const metadata = {
+	title:			"Products Store",
+	description:	"Home Page"
+};
 
 export default async function Home() {
-	
-	const productsJson = JSON.parse(await fs.readFile(process.cwd() + "/data/products.json", "utf8"));
+
+	const productsJson = JSON.parse(await fileSys.readFile(process.cwd() + "/data/products.json", "utf8"));
 	
 	return (
 		<>

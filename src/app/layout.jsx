@@ -1,18 +1,20 @@
-import styles			from "./layout.module.scss";
-import globalStyles		from "src/app/globals.scss";
+import styles from "./layout.module.scss";
+import "src/app/styles/globals.scss";
 
 export default function RootLayout({ children }) {
-	console.log("________________________________mainFont=" + globalStyles.mainFont);
+
+	/*
+		Herein is there no <head> or <Head> because each page
+		its own `metadata` exports, which automatically
+		into the html by Next rendered is.
+	*/
+
 	return (
 		<html lang="en">
-			<head>
-				<title>HEAD: Products' Store</title>
-				<meta content="width=device-width, initial-scale=1" name="viewport" />
-				<meta name="description" content="Ben Mullan test repository" />
-				<link rel="icon" href="/favicon.ico" />
-				<link rel="stylesheet" href={`https://fonts.googleapis.com/css2?family=${globalStyles.mainFont}`} precedence="default" />
-			</head>
-			<body className={styles.bodyTag}>{children}</body>
+			<body className={styles.bodyTag}>
+				{children}
+			</body>
 		</html>
 	);
+
 };
