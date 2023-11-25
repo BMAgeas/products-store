@@ -7,8 +7,8 @@
 		{ "Name" : "Monitor",	"Description" : "The one on my desk" }
 	],
 	"Applications" : [
-		{ "Name" : "Who Am I?",	"URL" : "/Apps/WhoAmI/",	"Description" : "Enter a name and have the computer guess the age and gender" },
+		{ "Name" : "Who-Am-I",	"URL" : "/Apps/WhoAmI/",	"Description" : "Enter a name and have the computer guess the age and gender" },
 		{ "Name" : "Weather",	"URL" : "/Apps/Weather/",	"Description" : "See the current weather in your area" },
-		{ "Name" : "To Do",		"URL" : "/Apps/ToDo/",		"Description" : "Make a list of tasks" }
+		{ "Name" : "To-Do",		"URL" : "/Apps/ToDo/",		"Description" : "Make a list of tasks" }
 	]
 }

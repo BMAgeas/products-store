@@ -1,6 +1,5 @@
 import styles			from "./PSHeader.module.scss";
 import SearchProvider	from "@/components/SearchProvider/SearchProvider";
-import Image			from "next/image";
 
 
 export default function PSHeader() {

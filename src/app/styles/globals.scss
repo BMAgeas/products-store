@@ -11,7 +11,9 @@
 
 
 .sectionHeading {
-	color:	map.get($globalColours, "nearlyBlack");
+	color:				map.get($globalColours, "nearlyBlack");
+	font-size:			4rem;
+	background-color: red;
 }
 
 

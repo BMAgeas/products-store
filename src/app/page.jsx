@@ -1,6 +1,8 @@
 import {promises as fileSys}	from "fs";
 import styles					from "./page.module.scss";
+import globalStyles				from "src/app/styles/globals.scss";
 import PSHeader					from "@/components/PSHeader/PSHeader";
+import PSFooter					from "@/components/PSFooter/PSFooter";
 import ProductBox				from "@/components/ProductBox/ProductBox";
 
 export const metadata = {
@@ -19,7 +21,7 @@ export default async function Home() {
 				
 				{/* _ Products _ */}
 				<section>
-					<h1 className={styles.sectionHeading}>Products:</h1>
+					<h1 className={globalStyles.sectionHeading}>Products:</h1>
 					<ul className={styles.ProductBoxesContainer}>
 						{
 							productsApplicationsJson.Products.map(
@@ -37,7 +39,7 @@ export default async function Home() {
 
 				{/* _ Applications _ */}
 				<section>
-					<h1 className={styles.sectionHeading}>Applications:</h1>
+					<h1 className={globalStyles.sectionHeading}>Applications:</h1>
 					<ul className={styles.ProductBoxesContainer}>
 						{
 							productsApplicationsJson.Applications.map(
@@ -54,7 +56,7 @@ export default async function Home() {
 				</section>
 
 			</main>
-			<footer>Products Store (c) 2023</footer>
+			<PSFooter/>
 		</>
 	);
 

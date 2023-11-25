@@ -1,15 +1,29 @@
-import styles	from "./ProductBox.module.scss";
-import Image	from "next/image";
+// ↓ `import {promises as fs} from "fs";` does not work. Not sure why.
+const fs						= require("fs");
+import styles					from "./ProductBox.module.scss";
 
 export default function ProductBox({ ProductName, DescriptionText, ActionButton }) {
 	return (
 		<li className={styles.productBoxOuter}>
-			<Image src={`/Images/ProductImages/Default.jpg`} alt="Product Thumbnail" width={0} height={0} sizes="100vw" style={{ width : "100%", height : "10vw" }} className={styles.productThumbnail} />
-				<div>
-					<h3 className={styles.productHeading}>{ProductName}</h3>
-					<p className={styles.productDescription}>{DescriptionText}</p>
-					{ActionButton}
-				</div>
+
+			<object
+				data={
+					(
+						(imagesDir = "/Images/ProductImages") =>
+							fs.existsSync(`${process.cwd()}/public${imagesDir}/${ProductName}.jpg`)
+							? `${imagesDir}/${ProductName}.jpg`
+							: `${imagesDir}/Default.jpg`
+					)()
+				}
+				className={styles.productThumbnail}
+			/>
+
+			<div className={styles.productBoxTextHalf}>
+				<h3 className={styles.productHeading}>{ProductName}</h3>
+				<p className={styles.productDescription}>{DescriptionText}</p>
+				{ActionButton}
+			</div>
+
 		</li>
 	);
 }

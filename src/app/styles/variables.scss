@@ -1,15 +1,18 @@
 $globalColours: (
 	"deadBlack"			: rgb(017, 017, 017),
 	"nearlyBlack"		: rgb(054, 054, 054),
+	"mutedText"			: rgb(161, 161, 161),
 	"midGrey"			: rgb(218, 218, 218),
 	"subtleGrey"		: rgb(241, 241, 241),
 	"lurid"				: rgb(255, 000, 000)
 );
 
 $globalFonts: (
-	"siteFont"			: Exo 2
+	"siteFont"			: Lexend
 );
 
 $globalSizes: (
-	"midBorderRadius"	: 4px
+	"midBorderRadius"	: 4px,
+	"zwCardMargin"		: 0.8rem,
+	"inCardPadding"		: 0.5rem
 );
