@@ -1,0 +1,14 @@
+@use "sass:map";
+@import "src/app/styles/globals.scss";
+
+.footerTag {
+
+	text-align:		center;
+	color:			map.get($globalColours, "mutedText");
+
+	margin: {
+		bottom:		1rem;
+		top:		1rem;
+	}
+
+}
