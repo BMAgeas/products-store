@@ -1,57 +1,24 @@
-import {promises as fileSys}	from "fs";
 import styles					from "./page.module.scss";
 import globalStyles				from "src/app/styles/globals.scss";
 import PSHeader					from "@/components/PSHeader/PSHeader";
 import PSFooter					from "@/components/PSFooter/PSFooter";
-import ProductBox				from "@/components/ProductBox/ProductBox";
+import ProductBoxesRenderer		from "@/components/ProductBoxesRenderer/ProductBoxesRenderer";
 
 export const metadata = {
 	title:			"Products Store",
 	description:	"Home Page"
 };
 
-export default async function Home() {
-
-	const productsApplicationsJson = JSON.parse(await fileSys.readFile(process.cwd() + "/data/products.json", "utf8"));
-	
+export default async function Home() {	
 	return (
 		<>
 			<PSHeader/>
 			<main className={styles.mainTag}>
 				
-				{/* _ Products _ */}
 				<section>
-					<h1 className={globalStyles.sectionHeading}>Products:</h1>
+					<h1 className={globalStyles.sectionHeading}>Products & Applications:</h1>
 					<ul className={styles.ProductBoxesContainer}>
-						{
-							productsApplicationsJson.Products.map(
-								(product, index, array) =>
-									<ProductBox
-										key={index}
-										ProductName={product.Name}
-										DescriptionText={product.Description}
-										ActionButton={<button>Go</button>}
-									/>
-							)
-						}
-					</ul>
-				</section>
-
-				{/* _ Applications _ */}
-				<section>
-					<h1 className={globalStyles.sectionHeading}>Applications:</h1>
-					<ul className={styles.ProductBoxesContainer}>
-						{
-							productsApplicationsJson.Applications.map(
-								(application, index, array) =>
-									<ProductBox
-										key={index}
-										ProductName={application.Name}
-										DescriptionText={application.Description}
-										ActionButton={<a href={application.URL}>Go</a>}
-									/>
-							)
-						}
+						<ProductBoxesRenderer/>
 					</ul>
 				</section>
 
@@ -59,5 +26,4 @@ export default async function Home() {
 			<PSFooter/>
 		</>
 	);
-
 };
