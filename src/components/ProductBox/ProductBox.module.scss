@@ -2,13 +2,14 @@
 @import "src/app/styles/globals.scss";
 
 .productBoxOuter {
-
+	
 	box-sizing:				border-box;
 	display:				block;
 	position:				relative;
 	flex-direction:			column;
 	background-clip:		border-box;
 
+	/* These seem to work best as "%" */
 	width:					20%;
 	height:					15%;
 	text-align:				center;
