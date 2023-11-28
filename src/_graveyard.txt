@@ -1,0 +1,16 @@
+Old-and-unneeded snippets removed from other files.
+
+11:58 21/11/2023
+	import {FcSearch} from "react-icons/fc";
+	<FcSearch/>
+	<main style={{ backgroundColor : globalStyleVariables.subtleGrey }}>
+
+16:54 21/11/2023
+	🔍
+
+
+	/* Make SCSS variables accessible as JavaScript Variables (only via importing this file) */
+	:export {
+		@each $key, $value in $globalColours	{ #{unquote($key)}: $value; }
+		@each $key, $value in $globalFonts		{ #{unquote($key)}: $value; }
+	}

@@ -1,0 +1,31 @@
+/*
+	Contains Mixins (mi*) and global classes (.*).
+	Global SASS variables ($global*) are in ./variables.scss
+	This file can be safely impoted into any *.module.scss, because it contains no impure (non-locally-scoped) selectors
+*/
+
+
+@use "sass:map";
+@import "src/app/styles/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=#{map.get($globalFonts, 'siteFont')}");
+
+
+.sectionHeading {
+	color:				map.get($globalColours, "nearlyBlack");
+	font-size:			4rem;
+	background-color: red;
+}
+
+
+@mixin miBoxShadow {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+@mixin miGridContentFlexbox {
+	display:			flex;
+	flex-direction:		column;
+	flex-wrap:			nowrap;
+	justify-content:	flex-start;	/* ↑↓ */
+	align-items:		center;		/* ←→ */
+	align-content:		stretch;	/* ?? */
+}

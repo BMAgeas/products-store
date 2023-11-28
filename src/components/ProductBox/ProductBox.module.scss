@@ -1,0 +1,82 @@
+@use "sass:map";
+@import "src/app/styles/globals.scss";
+
+.productBoxOuter {
+
+	box-sizing:				border-box;
+	display:				block;
+	position:				relative;
+	flex-direction:			column;
+	background-clip:		border-box;
+
+	width:					20%;
+	height:					15%;
+	text-align:				center;
+	@include				miBoxShadow;
+
+	border: {
+		color:				map.get($globalColours, "midGrey");
+		style:				solid;
+		width:				1px;
+		radius:				map.get($globalSizes, "midBorderRadius");
+	}
+
+	margin: {
+		left:				map.get($globalSizes, "zwCardMargin");
+		right:				map.get($globalSizes, "zwCardMargin");
+		bottom:				map.get($globalSizes, "zwCardMargin");
+	}
+
+}
+
+.productThumbnail {
+	width:						100%;
+	height:						10vw;
+	object-fit:					cover;
+	box-sizing:					border-box;
+	overflow-clip-margin:		content-box;
+	border-top-left-radius:		map.get($globalSizes, "midBorderRadius");
+    border-top-right-radius:	map.get($globalSizes, "midBorderRadius");
+}
+
+.productBoxTextHalf {
+
+	padding: {
+		left:				map.get($globalSizes, "inCardPadding");
+		right:				map.get($globalSizes, "inCardPadding");
+		bottom:				map.get($globalSizes, "inCardPadding");
+	}
+
+	background-color:		map.get($globalColours, "subtleGrey");
+	overflow-wrap:			break-word;
+
+	border-top: {
+		color:				map.get($globalColours, "midGrey");
+		style:				solid;
+		width:				1px;
+	}
+
+}
+
+.productDescription {
+	font-size:			1em;
+}
+
+/* ↓ Vertical (Mobile) ↓ */
+@media only screen and (max-width: 600px) {
+
+	.productBoxOuter {
+
+		/* ↓ Alignment ↓ */
+		width:				45%;
+		padding:			0.5em;
+		margin:				0.5em;
+
+		/* ↓ Content ↓ */
+		font-size:			0.7rem;
+
+	}
+
+	.productHeading { font-size: 0.8rem; margin-bottom: 0.2em; }
+
+}

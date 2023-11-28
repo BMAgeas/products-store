@@ -2,6 +2,13 @@
 	"Products" : [
 		{ "Name" : "Water Bottle" },
 		{ "Name" : "Mouse" },
-		{ "Name" : "Watch", "ImageSrc" : "/ProductImages/AWatch.PNG" }
+		{ "Name" : "Watch" },
+		{ "Name" : "Laptop",	"Description" : "Ben Mullan's Ageas laptop computer" },
+		{ "Name" : "Monitor",	"Description" : "The one on my desk" }
+	],
+	"Applications" : [
+		{ "Name" : "Who-Am-I",	"URL" : "/WhoAmI/",	"Description" : "Enter a name and have the computer guess the age and gender" },
+		{ "Name" : "Weather",	"URL" : "/Weather/",	"Description" : "See the current weather in your area" },
+		{ "Name" : "To-Do",		"URL" : "/ToDo/",		"Description" : "Make a list of tasks" }
 	]
 }
