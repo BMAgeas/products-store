@@ -25,7 +25,7 @@
 	margin: {
 		left:				map.get($globalSizes, "zwCardMargin");
 		right:				map.get($globalSizes, "zwCardMargin");
-		bottom:				map.get($globalSizes, "zwCardMargin");
+		bottom:				calc(map.get($globalSizes, "zwCardMargin") * 3);
 	}
 
 }

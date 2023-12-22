@@ -1,4 +1,4 @@
-Centralise all colours in variables.module.scss
+DONE: Centralise all colours in variables.module.scss
 
 fetch(
 	"https://famous-quotes4.p.rapidapi.com/random?category=all&count=1",

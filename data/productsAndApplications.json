@@ -1,10 +1,9 @@
 {
 	"Products" : [
-		{ "Name" : "Water Bottle" },
-		{ "Name" : "Mouse" },
-		{ "Name" : "Watch" },
-		{ "Name" : "Laptop",	"Description" : "Ben Mullan's Ageas laptop computer" },
-		{ "Name" : "Monitor",	"Description" : "The one on my desk" }
+		{ "Name" : "Water Bottle",	"Description" : "The one on my desk" },
+		{ "Name" : "Mouse",			"Description" : "The one on my desk" },
+		{ "Name" : "Laptop",		"Description" : "Ben Mullan's Ageas laptop" },
+		{ "Name" : "Monitors",		"Description" : "The two on my desk" }
 	],
 	"Applications" : [
 		{ "Name" : "Who-Am-I",	"URL" : "/WhoAmI/",		"Description" : "Enter a name and have the computer guess the age and gender" },

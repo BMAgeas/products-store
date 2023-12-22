@@ -19,7 +19,7 @@ export default function ProductBox({ ProductName, DescriptionText, ActionButton 
 			/>
 
 			<div className={styles.productBoxTextHalf}>
-				<h3 className={styles.productHeading}>{ProductName}</h3>
+				<h3 data-is-search-key="true" className={styles.productHeading}>{ProductName}</h3>
 				<p className={styles.productDescription}>{DescriptionText}</p>
 				{ActionButton}
 			</div>

@@ -18,7 +18,7 @@ export default async function Home() {
 				<section>
 					<h1 className={globalStyles.sectionHeading}>Products & Applications:</h1>
 					<ul className={styles.ProductBoxesContainer}>
-						<ProductBoxesRenderer/>
+						{/* <ProductBoxesRenderer Products={ JSON... } /> */}
 					</ul>
 				</section>
 
